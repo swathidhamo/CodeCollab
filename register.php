@@ -87,7 +87,7 @@
      window.onload = function(){
       var name = document.getElementById("username");
       name.addEventListener("keyup",username_check);
-      console.log("hi");
+    
     }
 
   function username_check(){
@@ -114,11 +114,11 @@
    .login{
 
      border: 2px solid black;
-     border-radius: 1px 1px 1px 1px;
+     border-radius: 6px 6px 6px 6px;
      padding: 15px 15px 15px 15px;
      margin right: 400px;
      margin-top: 210px;
-     margin-left: 210px;
+     margin-left: 310px;
      width: 600px;
      font-size: 20px;
    

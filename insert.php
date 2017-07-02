@@ -11,6 +11,8 @@
      }
 
      else{
+       echo "Welcome to the forum, ".$_SESSION["username"];
+
      	if(isset($_POST["submit"])){
      		if(isset($_POST["title"])){
      			$title= $_POST["title"];
@@ -83,7 +85,7 @@
          $sql = mysqli_query($link,$query_display);
          while($rows = mysqli_fetch_array($sql)){
 
-         echo "<p><a href= 'snippet.php?id=".$rows['id']."'>".$rows['id']." . ".$rows['title']."</a></p>"; 
+         echo "<p><a href= 'snippet.php?title=".$rows['title']."'>".$rows['id']." . ".$rows['title']."</a></p>"; 
          }
 
      }
@@ -133,6 +135,7 @@
 
        <p><input type = "submit" name = "submit" value = "Create snippet"></p>
   </div>
+  <div id = "info">After you create the snippet, it can be ascessed by the url "http://localhost/code/snippet.php?title=(the title name)"</div>
   <a href = "logout.php">Logout</a>
 
     </form>

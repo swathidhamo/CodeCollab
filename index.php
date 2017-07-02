@@ -8,7 +8,7 @@
      session_destroy();
 
      $link = mysqli_connect("127.0.0.1", "root", "", "delta");
-      require_once "recaptchalib.php";
+     require_once "recaptchalib.php";
      session_start();    
 
      if(!$link){
@@ -41,9 +41,9 @@
         $response = null;
  
       // check secret key
-        $reCaptcha = new ReCaptcha($secret);
+         $reCaptcha = new ReCaptcha($secret);
 
-         if ($_POST["g-recaptcha-response"]) {
+          if ($_POST["g-recaptcha-response"]) {
           $response = $reCaptcha->verifyResponse(
           $_SERVER["REMOTE_ADDR"],
           $_POST["g-recaptcha-response"]
@@ -56,13 +56,13 @@
         $sql = mysqli_query($link,$query);       
         $rows = mysqli_num_rows($sql);
         if($rows==1&&$response != null&&$response->success){
-            echo "Sucessfully logged in";
+            echo "  Sucessfully logged in";
             $_SESSION["username"] = $username;
             header("Location: insert.php");
 
         }
         else{
-            echo "Invalid username or password";
+            echo "  Invalid username or password";
         }
 
 
@@ -85,11 +85,11 @@
 <style type="text/css">
    .login{
      border: 2px solid black;
-     border-radius: 1px 1px 1px 1px;
+     border-radius: 6px 6px 6px 6px;
      padding: 15px 15px 15px 15px;
      margin right: 400px;
      margin-top: 210px;
-     margin-left: 210px;
+     margin-left: 310px;
      width: 450px;
      font-size: 20px;
    }

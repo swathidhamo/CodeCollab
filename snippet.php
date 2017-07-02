@@ -7,11 +7,20 @@
   session_start();
 	$link = mysqli_connect("127.0.0.1", "root", "", "delta");
    
-    if(isset($_GET["id"])){
-    	$id = $_GET["id"];
+    if(isset($_GET["title"])){
+    	$title = $_GET["title"];
     }
 
-    $query = "SELECT id, title, code, language,status,username,visible,times,file FROM code WHERE id = $id";
+    if(!empty($_SESSION["username"])){
+      echo "Welcome to the session  ".$_SESSION["username"];
+      echo "<div id = 'logout'><a href = 'logout.php'>Logout</a>   <a href = 'insert.php'>Create snippets</a> </div>";
+    
+
+    }
+
+
+
+    $query = "SELECT id, title, code, language,status,username,visible,times,file FROM code WHERE title = '".$title."' ";
     $sql = mysqli_query($link,$query);
     
    	
@@ -38,6 +47,9 @@
         if($result["visible"]==0){
           echo "Code contributed by : ".$result["username"];
          } 
+        else{
+          echo "Code contributed by : Anonymous user";
+        }
 
          print  "<div>Snippet  ".$result["id"]. "<p> Title:     " . $result["title"]."</p> <p>Code:   <pre id = 'code' 
          class = 'prettyprint'><code class =".$lang.">".$string. "</code></pre></p><p> Language: ".$result['language']."<br></div>";
@@ -71,12 +83,14 @@
     background: #0ca3d2;
 
    }
-   
+
+   #logout{
+    margin-left: 1200px;
+   }
+
 
   </style>
 </head>
 <body>
-  <a href = "logout.php">Logout</a>
-  <a href = "insert.php">Create snippets</a>
 </body>
 </html>
