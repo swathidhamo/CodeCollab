@@ -7,7 +7,7 @@ for ascessing the homepage where the credentials have to be entered to login in 
 About the files: #http://localhost/code/index.php is the login page
 #http://localhost/code/register.php is the registration page
 #path/insert.php is the page for creating/uploading a code snippet
-#path/snippet.php?title="(insert title name here)" is the page for viewing a snippet
+#path/snippet.php?id="(insert id number here)" is the page for viewing a snippet
 #logout.php is the logout page
 Step 1: Installation  of the WAMP server
 #Download the WAMP server package from this page http://www.wampserver.com/en/#download-wrapper
@@ -56,7 +56,7 @@ CREATE TABLE  'code` (
           `title` TEXT NOT NULL ,
           `username` TEXT NOT NULL ,
           `code` TEXT NOT NULL , 
-          `languages` TEXT NOT NULL , 
+          `language` TEXT NOT NULL , 
           `file` LONGBLOB NOT NULL ,
           `status` INT NOT NULL , 
           `times` INT NULL , 
