@@ -9,7 +9,7 @@
     $sql = mysqli_query($link,$query_display);
      while($rows = mysqli_fetch_array($sql)){
 
-       echo "<p><a href= 'snippet.php?title=".$rows['title']."'>".$rows['id']." . ".$rows['title']."</a></p>"; 
+       echo "<p><a href= 'snippet.php?id=".$rows['id']."'>".$rows['id']." . ".$rows['title']."</a></p>"; 
       }
 
      mysqli_close($link);

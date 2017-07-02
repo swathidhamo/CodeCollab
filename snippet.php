@@ -7,8 +7,8 @@
   session_start();
 	$link = mysqli_connect("127.0.0.1", "root", "", "delta");
    
-    if(isset($_GET["title"])){
-    	$title = $_GET["title"];
+    if(isset($_GET["id"])){
+    	$id = $_GET["id"];
     }
 
     if(!empty($_SESSION["username"])){
@@ -20,7 +20,7 @@
 
 
 
-    $query = "SELECT id, title, code, language,status,username,visible,times,file FROM code WHERE title = '".$title."' ";
+    $query = "SELECT id, title, code, language,status,username,visible,times,file FROM code WHERE id = '".$id."' ";
     $sql = mysqli_query($link,$query);
     
    	
