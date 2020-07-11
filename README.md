@@ -1,5 +1,5 @@
 # Welcome to CodeCollab
-CodeCollab is a minimal version of PasteBin, the code sharing website. It uses the PHP-MySQL stack to create this application.
+CodeCollab is a minimal version of PasteBin, the code-sharing website. It uses the native PHP and MySQL to create this application.
 
 #### Server routes: 
 - For ascessing the database http://localhost/phpmyadmin
@@ -20,13 +20,13 @@ https://make.wordpress.org/core/handbook/tutorials/installing-a-local-server/wam
 - Now type http://localhost/phpmyadmin to enter the username as 'root' and password ''  to get the MYSQL database page
 - Now click on the WAMP desktop icon and you should be able to see the WAMP link go green and then you're all set to go.
 
-##### Step2: Creating .php files in the wamp64 directory in the C: drive
+##### Step2: Creating .php files in the wamp64 directory in the directory
 - Go to www directory in the wamp64 folder and create a directory called code. This will be the directory we will store all our .php file from now on
 - Create the first file index.php  and to view the file extablish a link to the server using mysqli_connect() and then type http://localhost/forum/index.php to view your file.
 
 ##### Step 3: Creating the MYSQL database
 - Enter the username and password and create a new database called "delta"
-- Over the course of this task I will be using 3 tables in the database
+- Over the course of this task we will be using 3 tables in the database
 ###### Table 1 : Create a table called user_info that will store the details of the users and their passwords and their names
 
 
