@@ -4,7 +4,8 @@ CodeCollab is a minimal version of PasteBin the code sharing website. It uses th
 #### Server routes: 
 - For ascessing the database http://localhost/phpmyadmin
 - For ascessing the homepage where the credentials have to be entered to login in or create a new user http://localhost/code/index.php
-#### About the files: #http://localhost/code/index.php is the login page
+#### About the files: 
+- http://localhost/code/index.php is the login page
 - http://localhost/code/register.php is the registration page
 - path/insert.php is the page for creating/uploading a code snippet
 - path/snippet.php?id="(insert id number here)" is the page for viewing a snippet
@@ -15,17 +16,6 @@ CodeCollab is a minimal version of PasteBin the code sharing website. It uses th
 - Choose the director you wish to store it under(wamp64 in the C drive), the default browser (Mozilla Firefox)and the text editor ( Sublime) by choosing their corresponing .exe files by also reffering to the wordpress link below.
 https://make.wordpress.org/core/handbook/tutorials/installing-a-local-server/wampserver/
 - Also change the username and password in the php.ini file by changing the username to 'root' and password = ''
-- If you cannot connect: invalid settings error message, then you’ll need to edit the C:\wamp\apps\phpmyadmin3.5.1\config.inc.php file in a plain text editor (your version number may be different), and ensure this option is set to true:
-  $cfg['Servers'][$i]['AllowNoPassword'] = true;
-- Make changes in the php.ini file:
-        1.  Set level of error reporting – remove the ; at beginning of line to enable:
-          error_reporting = E_ALL ^ E_DEPRECATED (~line 112)
-        2.  Log PHP errors – remove the ; at beginning of line to enable:
-          error_log = "c:/wamp/logs/php_error.log" (~line 639)
-        3. Increase maximum size of POST data that PHP will accept – change the value:
-          post_max_size = 50M (~line 734)
-        4. Increase maximum allowed size for uploaded files – change the value:
-          upload_max_filesize = 50M (~line 886)
 - Check to see if the server is configured by typing http://localhost . If you get a WAMP server homepage then it is configured
 - Now type http://localhost/phpmyadmin to enter the username as 'root' and password ''  to get the MYSQL database page
 - Now click on the WAMP desktop icon and you should be able to see the WAMP link go green and then you're all set to go.
