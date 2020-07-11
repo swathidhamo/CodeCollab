@@ -1,5 +1,5 @@
 # Welcome to CodeCollab
-CodeCollab is a minimal version of PasteBin the code sharing website. It uses the PHP-MySQL stack to create this application.
+CodeCollab is a minimal version of PasteBin, the code sharing website. It uses the PHP-MySQL stack to create this application.
 
 #### Server routes: 
 - For ascessing the database http://localhost/phpmyadmin
